@@ -16,7 +16,6 @@ int main(int argc, char const *argv[]) {
   initializeGame(2, cards, 5, &game);
 
   int card = rand() % 10;
-  printf("card#: %d\n", card); //remove later
   //Check Functions count of deckcount
   int countedcards = fullDeckCount(1, card, &game);
 
