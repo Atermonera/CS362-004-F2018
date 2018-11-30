@@ -322,11 +322,11 @@ public class UrlValidator implements Serializable {
                 }
             }
             // drop through to continue validation
-        } else { // not file:
+    //    } else { // not file:
             // Validate the authority
-            if (!isValidAuthority(authority)) {
-                return false;
-            }
+    //        if (!isValidAuthority(authority)) {
+    //            return false;
+    //        }
         }
 
         if (!isValidPath(urlMatcher.group(PARSE_URL_PATH))) {
@@ -363,9 +363,9 @@ public class UrlValidator implements Serializable {
             return false;
         }
 
-        if (isOff(ALLOW_ALL_SCHEMES) && !allowedSchemes.contains(scheme.toLowerCase(Locale.ENGLISH))) {
-            return false;
-        }
+   //     if (isOff(ALLOW_ALL_SCHEMES) && !allowedSchemes.contains(scheme.toLowerCase(Locale.ENGLISH))) {
+   //         return false;
+   //     }
 
         return true;
     }
